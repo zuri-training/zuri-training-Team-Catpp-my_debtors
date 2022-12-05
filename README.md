@@ -19,6 +19,6 @@ Authenticated Users
 
 **Design:** FIGMA
 
-**Client:** HTML, CSS, JAVASCRIPT
+**Client:** HTML, CSS, JAVASCRIPT, REACT
 
 **Server:** PYTHON, DJANGO
