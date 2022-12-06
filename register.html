@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/styles.css">
+  <title>Registration</title>
+</head>
+
+<body>
+  <div class="Container">
+
+    <!--       Heading of Page -->
+    <h1> Registration Here! </h1>
+    <p> Having the knowledge of the debtors at your footstep is very important. Register now
+      to get this details</p>
+    <hr>
+
+    <!--  Sections of Registration Page      -->
+    <label> First Name</label>
+    <input type="text" placeholder="Enter your first name " name="firstname" id="name" required>
+
+    <label> Last Name</label>
+    <input type="text" placeholder="Enter your last name " name="lastname" id="name" required>
+
+    <!-- Section for gender(select field)  -->
+    <label for="gender"> Select your gender </label>
+    <select name="gender">
+      <option value="none" selected>Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Prefer Not To Say</option>
+    </select>
+
+    <label> Occupation</label>
+    <input type="text" placeholder="Enter your Occupation " name="occupation" id="occupation" required>
+
+
+    <label> Residential Address</label>
+    <input type="text" placeholder="address " name="address" id="address" required>
+
+    <label> Email</label>
+    <input type="text" placeholder="email@gmail.com " name="Email" id="email" required>
+
+    <!-- Password Section -->
+    <label>Password</label>
+    <input type="password" placeholder="type in password" name="psw" id="psw" required>
+
+    <label>Confirm Password</label>
+    <input type="password" placeholder="type in password" name="psw" id="psw" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember">By clicking, you agree to user's Agreement Privacy Policy
+      and cookie policy <a href="#">Terms & Conditions.
+    </label>
+
+    <button type="submit" class="registerbtn">Register</button>
+    <div class="SignIn">
+      <p>Already have an account?<a href="login.html"> Sign in</a></p>
+    </div>
+
+  </div>
+</body>
+
+</html>
