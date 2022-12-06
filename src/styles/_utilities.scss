@@ -1,0 +1,4 @@
+@function px-rem($number, $suffix:rem){
+  $calculate: calc($number/ 16);
+  @return #{$calculate}#{$suffix}
+}
