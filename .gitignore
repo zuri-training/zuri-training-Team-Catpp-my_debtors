@@ -1,2 +1,4 @@
 FRONTEND/node_modules
 BACKEND/venv
+BACKEND/my_debtors/__pycache__
+.gitignore
