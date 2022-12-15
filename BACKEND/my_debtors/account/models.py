@@ -1,12 +1,12 @@
 import uuid
 from django.conf import settings
 from django.db import models
-# from django.contrib.auth.models import AbstractUser
-# from . user import CustomUserManager
+from django.contrib.auth.models import AbstractUser
+# from .user import CustomUserManager
 
 # Create your models here.
 
-# Custom user models
+# # Custom user models
 # class CustomUser(AbstractUser):
 #     username = None
 #     first_name = models.CharField(max_length=250)
@@ -26,10 +26,10 @@ from django.db import models
 #         verbose_name = 'User'
 
 #     def __str__(self):
-#         return f"{self.first_name} {self.last_name}"
+        # return f"{self.first_name} {self.last_name}"
 
 class School(models.Model):
-    # school = models.OneToOneField(settings.AUTH_USER_MODEL, limit_choices_to={'isSchool': True}, on_delete=models.CASCADE)
+    school = models.OneToOneField(settings.AUTH_USER_MODEL, limit_choices_to={'isSchool': True}, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     state = models.CharField(max_length=50)
     LGA = models.CharField(max_length=100)
@@ -57,7 +57,7 @@ class Student(models.Model):
         return self.first_name
 
 class Sponsor(models.Model):
-    # parent = models.OneToOneField(settings.AUTH_USER_MODEL, limit_choices_to={'isParent': True}, on_delete=models.CASCADE)
+    parent = models.OneToOneField(settings.AUTH_USER_MODEL, limit_choices_to={'isParent': True}, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=250, blank=True, null=True)
     last_name = models.CharField(max_length=250, blank=True, null=True)
     relationship = models.CharField(max_length=10)
@@ -74,7 +74,7 @@ class Sponsor(models.Model):
 
 class Debtor(models.Model):
     posted_by = models.ForeignKey(School, on_delete=models.CASCADE)
-    # parent_details = models.ForeignKey(settings.AUTH_USER_MODEL, limit_choices_to={'isParent': True}, on_delete=models.CASCADE)
+    parent_details = models.ForeignKey(settings.AUTH_USER_MODEL, limit_choices_to={'isParent': True}, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=250)
     last_name = models.CharField(max_length=250)
     academic_session = models.DateField()
